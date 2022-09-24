@@ -1,0 +1,15 @@
+cd "C:\Users\leand\Desktop\Projetos Renata\LuizaCodeRenataPerez\Projeto1"
+python -m venv ambientevirtual
+.\ambientevirtual\Scripts\activate
+
+
+
+#Subindo uvicorn:
+Dentro da mesma pasta com o arquivo .py, executar no terminal:
+uvicorn <nome do arquivo sem o .py>:app --reload
+
+cd "C:\Users\leand\Desktop\Projetos Renata\LuizaCodeRenataPerez\Projeto1\"
+uvicorn Projeto1:app --reload
+
+
+GET http://127.0.0.1:8000/usuario?id=1

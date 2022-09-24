@@ -1,0 +1,26 @@
+cd "pasta do projeto git"
+
+git clone "caminho git" (a primeira vez que baixar o arquivo)
+
+git status
+
+VERIFICAR A BRANCH
+
+git checkout "nome da  brach"
+
+git checout -b "nome da branch" (cria e entra na branch)
+
+COMO SINCRONIZAR A BRANCH:
+
+git fetch --all
+
+git pull
+
+gid add "nome do arquivo" ou . (todos os arquivos)
+
+git commit -m "mensagem"
+
+git push 
+
+OBS "VERIFICAR A BRANCH ANTES DE FAZER O GIT PUSH"
+

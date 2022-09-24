@@ -1,0 +1,89 @@
+###########
+#Testar API 
+GET http://127.0.0.1:8000/
+
+
+#######################################
+############  usuário  ################
+#######################################
+
+# Criar usuário
+POST http://127.0.0.1:8000/usuario HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "nome": "teste",
+    "email": "teste@gmail.com",
+    "senha": "1234"
+}
+
+#######################################
+# Pegar usuário
+GET http://127.0.0.1:8000/usuario?id=1 HTTP/1.1
+content-type: application/json
+
+#######################################
+# Pegar usuário por nome
+GET http://127.0.0.1:8000/usuario/nome/teste HTTP/1.1
+content-type: application/json
+
+#######################################
+# Deletar usário por id
+DELETE http://127.0.0.1:8000/usuario/1 HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Pegar lista de endereço por usuario
+GET http://127.0.0.1:8000/usuario/1/enderecos HTTP/1.1
+content-type: application/json
+
+
+#######################################
+# Pegar e-mails por domínio
+GET http://127.0.0.1:8000/usuarios/emails/gmail.com HTTP/1.1
+content-type: application/json
+
+
+#######################################
+############  endereço  ###############
+#######################################
+
+# Criar endereço e retornar OK
+POST http://127.0.0.1:8000/endereco/1 HTTP/1.1
+content-type: application/json
+
+{
+    "id_endereco": 1,
+    "rua": "Rua Ladrilhada",
+    "cep": "99999-999",
+    "cidade": "Sao Paulo",
+    "estado": "SP"
+}
+
+#######################################
+# Deletar endereço por id do endenreço
+DELETE http://127.0.0.1:8000/endereco/1 HTTP/1.1
+content-type: application/json
+
+
+#######################################
+############  produto  ################
+#######################################
+
+# Criar produto
+POST http://127.0.0.1:8000/produto HTTP/1.1
+content-type: application/json
+
+{
+    "id": 1,
+    "nome": "Sorvete",
+    "descricao": "Doce gelado",
+    "preco": 9.99
+}
+
+#######################################
+# Deletar produto por id do produto
+DELETE http://127.0.0.1:8000/produto/1 HTTP/1.1
+content-type: application/json

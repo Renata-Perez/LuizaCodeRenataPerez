@@ -1,0 +1,33 @@
+
+GET http://localhost:8000/
+
+###
+
+#Cadastro de musica
+
+POST http://localhost:8000/musicas
+
+{
+    "nome": "Patiente",
+    "artista":"Guns",
+    "tempo": 120
+}
+
+####
+
+POST http://localhost:8000/musicas
+
+{
+    "nome": "Faroest",
+    "artista":"Legiao",
+    "tempo": 120
+}
+
+###
+
+GET http://localhost:8000/musicas
+
+###
+
+GET http://localhost:8000/musicas/2
+

@@ -1,0 +1,64 @@
+cd "C:\Users\leand\Desktop\Projetos Renata\LuizaCodeRenataPerez\Projeto1"
+python -m venv ambientevirtual
+.\ambientevirtual\Scripts\activate
+
+
+
+#Subindo uvicorn:
+Dentro da mesma pasta com o arquivo .py, executar no terminal:
+uvicorn <nome do arquivo sem o .py>:app --reload
+
+cd "C:\Users\leand\Desktop\Projetos Renata\LuizaCodeRenataPerez\Projeto1\"
+uvicorn Projeto1:app --reload
+
+
+GET http://127.0.0.1:8000/usuario?id=1
+
+
+pip install uvicorn requests fastapi
+
+pip install -r requirements.txt
+
+pip install pyjwt[crypto]
+
+MONGO: https://cloud.mongodb.com/v2/6323a3e55aff114db6a7b82b#clusters
+
+
+
+
+Query mongo útil por ID:
+{ $and : [ { "user_id" : ObjectId("6325bffa0293e14622983528") } ] }
+
+
+{ $or : [ { "user._id" : ObjectId("6325bffa0293e14622983526") } ] }
+
+
+
+
+db = db.getSiblingDB("shopping_cart");
+db.getCollection("address").find(
+    {
+        "user_id" : ObjectId("6325bffa0293e14622983528")
+    }
+);
+
+
+
+Documentos sem o id tal (not equal):
+db = db.getSiblingDB("shopping_cart");
+db.getCollection("address").find(
+    {
+        "user_id" : {
+            "$ne" : ObjectId("6325bffa0293e14622983528")
+        }
+    }
+);
+
+
+
+//Apagar registros. Atributo: -> true = single document e false para only one document
+db.getCollection("address").remove( {
+        "user_id" : {
+            "$ne" : ObjectId("6325bffa0293e14622983528")
+        }
+    }, false);
